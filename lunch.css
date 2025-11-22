@@ -1,0 +1,78 @@
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.dish-card {
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  padding: 30px 40px;
+  border-radius: 35px;
+  cursor: pointer;
+  filter: drop-shadow(17px 19px 24px rgba(0,0,0,0.13));
+  border: 2px solid transparent;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.dish-card img {
+  height: 100%;
+  border-radius: 35px;
+  margin-bottom: 12px;
+  transition: transform 0.3s ease;
+}
+
+.dish-price {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 6px;
+}
+
+.dish-name {
+  font-size: 18px;
+  margin-bottom: 6px;
+}
+
+.dish-weight {
+  color: #777;
+  margin-bottom: 12px;
+}
+
+.dish-card button {
+  background: #f1eee9;
+  border: none;
+  padding: 10px 30px;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-top: auto; /* прижимает кнопку вниз */
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Hover эффекты */
+.dish-card:hover {
+  border-color: tomato;
+  transform: scale(1.03);
+}
+
+.dish-card:hover img {
+  transform: scale(1.05);
+}
+
+.dish-card:hover button {
+  background: tomato;
+  color: #fff;
+  transform: scale(1.05);
+}
+
+/* Адаптивность */
+@media (max-width: 800px) {
+  .menu-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 600px) {
+  .menu-grid { grid-template-columns: 1fr; }
+  nav.site-nav { flex-direction: column; align-items: center; }
+  nav.site-nav a { font-size: 22px; }
+  h1, h2 { text-align: center; }
+}

@@ -1,0 +1,169 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  color: #000;
+  line-height: 1.5;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
+  padding: 20px;
+}
+
+header {
+  background-color: #fff;
+  padding: 20px;
+}
+
+header h1 {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.site-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.site-nav a {
+  text-decoration: none;
+  font-size: 18px;
+  color: #000;
+}
+
+.site-nav a:hover {
+  color: tomato;
+}
+
+/* Активная ссылка */
+#active {
+  color: tomato;
+}
+
+/* Секции */
+section {
+  margin-bottom: 30px;
+}
+
+section h2 {
+  font-size: 22px;
+  margin-bottom: 10px;
+  color: #000;
+}
+
+section p {
+  margin-top: 10px;
+}
+
+/* Изображения */
+img {
+  width: 400px;
+  height: 200px;
+  display: block;
+  margin: 10px 0;
+}
+
+img[alt="buisness_lunch"] {
+  max-width: max-content;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+/* Таблица */
+table {
+  border-collapse: collapse;
+  margin-top: 15px;
+}
+
+table th, table td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: left;
+}
+
+table th {
+  background-color: #f0f0f0;
+  color: #000;
+}
+
+/* Футер */
+footer {
+  background-color: #000;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+  margin-top: auto; /* прижимает футер вниз */
+}
+
+footer a {
+  color: #fff;
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: #3f3f3f;
+}
+
+/* --- Адаптивность --- */
+
+/* ≤800px */
+@media (max-width: 800px) {
+  .site-nav {
+    justify-content: space-between;
+  }
+
+  header h1 {
+    text-align: center;
+  }
+
+  img {
+    width: 500px;
+    height: auto;
+  }
+
+  table {
+    font-size: 14px;
+  }
+}
+
+/* ≤600px */
+@media (max-width: 600px) {
+  .site-nav {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .site-nav a {
+    font-size: 22px; /* увеличиваем на 4px */
+  }
+
+  section h2 {
+    text-align: center;
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+
+  table {
+    font-size: 12px;
+  }
+}
+
+/* ≤400px */
+@media (max-width: 400px) {
+  table {
+    font-size: 10px;
+  }
+}
